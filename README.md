@@ -1,6 +1,6 @@
    
 
-# ExpoQuickStart
+# ExpoQuickStarter
 
 ExpoQuickStart is a pre-configured React Native Expo starter project that saves you time and effort when starting new mobile app projects. It includes essential dependencies, a clean project structure, and common configurations, allowing you to jump right into building your app's unique features without the need to set up everything from scratch. Simplify your development process with ExpoQuickStart and accelerate your app development journey.
 
