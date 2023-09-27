@@ -53,5 +53,14 @@
     "@types/react": "~18.2.14",
     "typescript": "^5.1.3"
   },
-  "private": true
+  "private": true,
+  "description": "Expo template",
+  "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/dinoemso97/ExpoQuickStarter.git"
+  },
+  "author": "Dino Emso <dino.emso6@hotmail.com>",
+  "homepage": "https://github.com/dinoemso97/ExpoQuickStarter#readme"
+
 }
