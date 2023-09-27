@@ -108,9 +108,9 @@ Install the latest EAS CLI
 npm install -g eas-cli
 ```
 
-"If you don't have an Expo account, you will need to create one at https://expo.dev/.
+If you don't have an Expo account, you will need to create one at https://expo.dev/
 
-In the terminal, simply type and log in with the account you will be using."
+In the terminal, simply type and log in with the account you will be using
 
 ```bash
 expo login
