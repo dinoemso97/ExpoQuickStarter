@@ -30,6 +30,8 @@ ExpoQuickStart is a pre-configured React Native Expo starter project that saves 
 - Localization with i18n-js
 - Expo constants
 - Environment variables
+- Expo permissions(location, library, camera etc..)
+- Expo build properties(suitable for deployment)
 
 
 
@@ -39,7 +41,8 @@ ExpoQuickStart is a pre-configured React Native Expo starter project that saves 
 You can use this template with this command
 
 ```bash
-  npx expo init my-project --template @dinoemso97/react-native-expo-starter-project
+git clone https://github.com/dinoemso97/ExpoQuickStarter
+
 ```
     
 ## Run Locally
@@ -47,13 +50,13 @@ You can use this template with this command
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd ExpoQuickStarter
 ```
 
 Start the project
 
 ```bash
-  npx expo start
+  npm install && npx expo start 
 ```
 
 
@@ -108,13 +111,71 @@ Install the latest EAS CLI
 npm install -g eas-cli
 ```
 
-If you don't have an Expo account, you will need to create one at https://expo.dev/
+If you don't have an Expo account, you will need to create one at https://expo.dev/.
 
-In the terminal, simply type and log in with the account you will be using
+In the terminal, simply type and log in with the account you will be using.
+
 
 ```bash
 expo login
 ```
+
+In the app.config.js file, change the 'slug' and 'owner' fields, and set the value to the username of the Expo account you have created.
+
+
+In the terminal, simply type to configure EAS for builds on your Expo account.
+
+```bash
+eas build:configure
+```
+
+After your project or EAS is configured on your Expo account, you will receive a project ID that you should add to the app.config.js file within the 'extra' object. 
+
+
+```bash
+  "extra": {
+      "eas": {
+        "projectId": "YOUR-PROJECT-ID"
+      }
+    }
+```
+
+#### Note! It is very likely that the projectId will be automatically added to your app.config.js file. In case it hasn't been added automatically, please add it manually and then run the 'eas build:configure' command again. You will be prompted to configure the build for iOS, Android, or both. I recommend selecting both.
+
+If you have completed every step up to this point, an eas.json file should have been created in your project. Next, copy the following "build" object in place of the default "build" object to automate everything
+
+```bash
+  "build": {
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview",
+      "env": {
+        "APP_NAME": "expoquick-preview"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "env": {
+        "APP_NAME": "expoquick-production"
+      }
+    },
+    "development": {
+      "channel": "development",
+      "env": {
+        "APP_NAME": "expoquick-development"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    }
+  }
+```
+
+
+
 
 To create an android build 
 ```bash
