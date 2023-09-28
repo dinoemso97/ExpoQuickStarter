@@ -41,7 +41,7 @@ ExpoQuickStart is a pre-configured React Native Expo starter project that saves 
 You can use this template with this command
 
 ```bash
-git clone https://github.com/dinoemso97/ExpoQuickStarter
+git clone https://github.com/dinoemso97/ExpoQuickStarter my-project
 
 ```
     
@@ -50,7 +50,7 @@ git clone https://github.com/dinoemso97/ExpoQuickStarter
 Go to the project directory
 
 ```bash
-  cd ExpoQuickStarter
+  cd my-project
 ```
 
 Start the project
