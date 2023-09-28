@@ -86,23 +86,6 @@ Also, there is expo documentation: https://docs.expo.dev/build/eas-json/
 
 
 
-## Environment variables and constants
-
-To create global variables, we need to define the name and value of the global variable in the eas.json file, within the env object. We can simply call them as process.env.VARIABLE_NAME and use them throughout the project. https://docs.expo.dev/build-reference/variables/
-
-To create constants, it's enough to define the value and name of the variable we want to use as a constant within the "extra" object located in the app.config.js file. Typically, we extract the values of these constants from global variables defined in the eas.json file. https://docs.expo.dev/versions/latest/sdk/constants/ 
-
-```bash
- import Constants from 'expo-constants'
-
- export const API_URL = Constants.expoConfig.extra.API_URL
-```
-
-
-
-
-
-
 # How to create build
 
 Install the latest EAS CLI 
@@ -193,8 +176,17 @@ You can find all other information aboud eas build https://docs.expo.dev/build/s
 
 
 
+## Environment variables and constants
 
+To create global variables, we need to define the name and value of the global variable in the eas.json file, within the env object. We can simply call them as process.env.VARIABLE_NAME and use them throughout the project. https://docs.expo.dev/build-reference/variables/
 
+To create constants, it's enough to define the value and name of the variable we want to use as a constant within the "extra" object located in the app.config.js file. Typically, we extract the values of these constants from global variables defined in the eas.json file. https://docs.expo.dev/versions/latest/sdk/constants/ 
+
+```bash
+ import Constants from 'expo-constants'
+
+ export const API_URL = Constants.expoConfig.extra.API_URL
+```
 
 
 
