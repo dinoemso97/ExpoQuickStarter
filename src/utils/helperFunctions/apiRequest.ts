@@ -5,9 +5,6 @@ import { Platform } from "react-native";
 /**
  * @description Base function for making any API calls.
  * baseURL and accessToken are optional based on the circumstance.
- * @author Haris Handzic
- * @author Tarik Dervisevic
- * @author Dino Emso
  */
 
 export default async (
@@ -49,7 +46,7 @@ export default async (
   return axios(request);
 };
 
-/***** ⬇️⬇️⬇️ HOW TO USAGE ⬇️⬇️⬇️ ******/
+/***** ⬇️⬇️⬇️ HOW TO USE ⬇️⬇️⬇️ ******/
 
 //EXAMPLE 1 - GET REQUEST ⬇️⬇️⬇️
 // export const fetchRandomData = async (randomParams: string) => {
